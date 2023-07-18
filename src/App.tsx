@@ -69,7 +69,7 @@ export function App() {
             if (newValue === null) {
               return
             }
-            if (newValue.firstName == "All") {
+            if (newValue.firstName === "All") {
               loadAllTransactions()
               setShowViewMore(true)
               return

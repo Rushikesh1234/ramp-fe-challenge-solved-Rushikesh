@@ -25,7 +25,7 @@ export function usePaginatedTransactions(): PaginatedTransactionsResult {
             return response
           }
           return {
-            data: [...paginatedTransactions?.data, ...response.data],
+            data: [...(previousResponse?.data ?? []), ...response.data],
             nextPage: response.nextPage,
           }
         })
